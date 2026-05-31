@@ -444,10 +444,19 @@ def build_pdf(tid):
 # ══════════════════════════════════════════════════════════════════════════════
 def show_pdf_preview(pdf_bytes):
     b64 = base64.b64encode(pdf_bytes).decode('utf-8')
-    st.markdown(
-        f'<iframe src="data:application/pdf;base64,{b64}" '
-        f'width="100%" height="750px" style="border:1px solid #ddd;border-radius:8px;"></iframe>',
-        unsafe_allow_html=True)
+    pdf_url = f"data:application/pdf;base64,{b64}"
+    st.markdown(f"""
+        <div style="border:1px solid #ddd;border-radius:8px;overflow:hidden;background:#525659;">
+            <object data="{pdf_url}" type="application/pdf" width="100%" height="750px">
+                <embed src="{pdf_url}" type="application/pdf" width="100%" height="750px">
+                    <p style="color:white;text-align:center;padding:20px;">
+                        ⚠️ Your browser blocked the PDF preview.<br>
+                        Please click <b>📥 Download PDF</b> above to view your resume.
+                    </p>
+                </embed>
+            </object>
+        </div>
+    """, unsafe_allow_html=True)
 
 # ══════════════════════════════════════════════════════════════════════════════
 # AI FUNCTIONS
