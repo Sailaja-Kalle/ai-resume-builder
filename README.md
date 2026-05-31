@@ -113,4 +113,4 @@ ai-resume-builder/
 
 ---
 
-## ⭐ If you find this useful, give it a star!
+
