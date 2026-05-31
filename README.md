@@ -2,7 +2,7 @@
 
 An intelligent resume builder powered by **Groq LLM (Llama 3.3)** with live PDF preview, multiple color templates, and AI-powered modifications — built with Streamlit and ReportLab.
 
-🌐 **Live App:** [Click here to try it](https://your-streamlit-url.streamlit.app)
+🌐 **Live App:** [Click here to try it](https://smart-resume-builder-ai.streamlit.app)
 
 ---
 
